@@ -1,0 +1,134 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.filesHub {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+.welcome {
+  text-align: center;
+}
+
+.welcomeImage {
+  width: 100%;
+  max-width: 420px;
+}
+
+.links {
+  a {
+    text-decoration: none;
+    color: "[theme:link, default:#03787c]";
+    color: var(--link); // note: CSS Custom Properties support is limited to modern browsers only
+
+    &:hover {
+      text-decoration: underline;
+      color: "[theme:linkHovered, default: #014446]";
+      color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
+    }
+  }
+}
+
+
+.disp-flex{
+  display: flex;
+  text-align: center;
+  padding-left: 5px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.disp-flex-row2{
+  display: flex;
+  text-align: center;
+  padding-left: 5px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 13px;
+}
+
+
+.label{
+  float: left;
+}
+
+.heading{
+  background-color: blue;
+  color: white;
+  text-align: center;
+}
+
+// .button{
+//   // margin-top: 24px;
+// }
+
+.tableRow{
+  cursor: pointer;
+}
+
+.tableRow:hover{
+  background-color: #E5E4E2;
+  border-left: 1px solid rgba black;
+}
+
+.MuiTable-root{
+  white-space: nowrap;
+  display: block !important;
+  max-height: 480px !important;
+
+}
+
+.MuiTableHead-root{
+  opacity: 1 !important;
+  background: #0078D4 !important;
+  position: sticky !important;
+  top: 0 !important;
+}
+
+
+.MuiTableCell-head{
+  font-weight: 700 !important;
+  color: white !important;
+  line-height: 0.8vmax !important;
+  width: 20%;
+}
+
+.MuiOutlinedInput-root{
+  height: 43px !important;
+}
+
+.MuiTableCell-body{
+  line-height: 0.5vmax !important;
+  width: 20%;
+}
+
+.emp{
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+  max-width: 75%;
+}
+
+
+.noData{
+  margin: 10px 10px 0 10px;  
+}
+
+.secondLabel{
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.empDetails{
+  gap: 0;
+}
+
+.mainDivMargin{
+  margin: 2%;
+}

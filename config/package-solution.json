@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "files-hub-client-side-solution",
+    "id": "d66f1278-a19f-4794-a3b8-09a16b1557e3",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.16.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "files-hub description"
+      },
+      "longDescription": {
+        "default": "files-hub description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "files-hub Feature",
+        "description": "The feature that activates elements of the files-hub solution.",
+        "id": "494dabbc-a3b6-4b32-958c-2f93955275c2",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/files-hub.sppkg"
+  }
+}
