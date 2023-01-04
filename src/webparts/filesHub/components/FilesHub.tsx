@@ -128,8 +128,7 @@ export default class FilesHub extends React.Component<
                     placeholder="File Type"
                     // onChange={handleChange}
                   >
-                    <MenuItem value={"file1"}>File 1</MenuItem>
-                    <MenuItem value={"file2"}>File 2</MenuItem>
+                    <MenuItem value={"Payroll Report"}>Payroll Report</MenuItem>
                   </Select>
                 </FormControl>
               </Box>
@@ -156,6 +155,7 @@ export default class FilesHub extends React.Component<
               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <Stack spacing={3}>
                   <DesktopDatePicker
+                    InputProps={{style: {height: '43px'}}}
                     className={styles["MuiInputBase-root"]}
                     label="Created Date"
                     inputFormat="MM/DD/YYYY"
@@ -171,6 +171,7 @@ export default class FilesHub extends React.Component<
               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <Stack spacing={3}>
                   <DesktopDatePicker
+                    InputProps={{style: {height: '43px'}}}
                     className={styles["MuiInputBase-root"]}
                     label="Modified Date"
                     inputFormat="MM/DD/YYYY"
@@ -248,9 +249,9 @@ export default class FilesHub extends React.Component<
                             <TableCell className={styles["MuiTableCell-bodyImg"]}>
                               {
                                 <div className={styles.ImgCenter}>
-                                <a target="_blank" rel="noreferrer" href={row.fileUrl}>
-                                <img className={styles.centerImg} src="https://globalmindsbiz.sharepoint.com/sites/Peoplesoft/Shared%20Documents/downloadIcon.png"></img>
-                                </a>
+                                  <a target="_blank" rel="noreferrer" href={row.fileUrl}>
+                                    <img className={styles.centerImg} src="https://globalmindsbiz.sharepoint.com/sites/Peoplesoft/Shared%20Documents/downloadIcon.png" />
+                                  </a>
                               </div>
                               }
                             </TableCell>
