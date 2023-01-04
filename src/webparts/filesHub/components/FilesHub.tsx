@@ -20,7 +20,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
 import TextField1 from "@mui/material/TextField";
-import * as dayjs from "dayjs";
+
 import axios from "axios";
 
 export interface IFilesHubDataState {
@@ -212,19 +212,22 @@ export default class FilesHub extends React.Component<
                     <TableHead className={styles["MuiTableHead-root"]}>
                       <TableRow>
                         <TableCell className={styles["MuiTableCell-head"]}>
-                          ReportFile
+                          Download Report
                         </TableCell>
                         <TableCell className={styles["MuiTableCell-head"]}>
-                          FileType
+                          File Type
                         </TableCell>
                         <TableCell className={styles["MuiTableCell-head"]}>
                           Description
                         </TableCell>
                         <TableCell className={styles["MuiTableCell-head"]}>
-                          Created by
+                          Created By
                         </TableCell>
                         <TableCell className={styles["MuiTableCell-head"]}>
-                          Modified by
+                          Created Date
+                        </TableCell>
+                        <TableCell className={styles["MuiTableCell-head"]}>
+                          Modified By
                         </TableCell>
                         <TableCell className={styles["MuiTableCell-head"]}>
                           Modified Date
@@ -324,10 +327,10 @@ export default class FilesHub extends React.Component<
     }
 
     if (this.state.searchCreatedDate) {
-      queryString += "&createddate=" + this.state.searchCreatedDate;
+      queryString += "&createddate=" + this.state.searchCreatedDate.format('MM-DD-YYYY');
     }
     if (this.state.searchModifiedDate) {
-      queryString += "&modifieddate=" + this.state.searchModifiedDate;
+      queryString += "&modifieddate=" + this.state.searchModifiedDate.format('MM-DD-YYYY');
     }
     await axios.get(queryString).then((response) => {
       // debugger;
