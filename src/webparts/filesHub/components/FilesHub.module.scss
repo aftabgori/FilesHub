@@ -103,14 +103,23 @@
   height: 43px !important;
 }
 
-.DatePicker{
+.MuiInputBase-root{
   height: 43px !important;
 }
 
 .MuiTableCell-body{
   line-height: 0.5vmax !important;
   width: 20%;
+
 }
+
+
+.MuiTableCell-bodyImg{
+  line-height: 0.5vmax !important;
+  width: 20%;
+  padding: 0 !important;
+}
+
 
 .emp{
   display: flex;
@@ -135,4 +144,14 @@
 
 .mainDivMargin{
   margin: 2%;
+}
+
+.ImgCenter{
+  text-align: center;
+  justify-content: center;
+  display: flex;
+
+}
+.centerImg{
+  max-height: 2.5vmax;
 }

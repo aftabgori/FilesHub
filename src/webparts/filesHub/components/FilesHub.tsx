@@ -42,6 +42,7 @@ export interface IFilesHubDataState {
       modifiedBy: string;
       createdDate: string;
       modifiedDate: string;
+      fileUrl: string;
     }
   ];
 }
@@ -71,6 +72,7 @@ export default class FilesHub extends React.Component<
           modifiedBy: "",
           createdDate: "",
           modifiedDate: "",
+          fileUrl: "",
         },
       ],
     };
@@ -154,7 +156,7 @@ export default class FilesHub extends React.Component<
               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <Stack spacing={3}>
                   <DesktopDatePicker
-                    className={styles.DatePicker}
+                    className={styles["MuiInputBase-root"]}
                     label="Created Date"
                     inputFormat="MM/DD/YYYY"
                     value={this.state.searchCreatedDate}
@@ -169,7 +171,7 @@ export default class FilesHub extends React.Component<
               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <Stack spacing={3}>
                   <DesktopDatePicker
-                    className={styles.DatePicker}
+                    className={styles["MuiInputBase-root"]}
                     label="Modified Date"
                     inputFormat="MM/DD/YYYY"
                     value={this.state.searchModifiedDate}
@@ -243,12 +245,15 @@ export default class FilesHub extends React.Component<
                             key={row.employeeId}
                           >
                             {/* <TableCell component="th" scope="row" /> */}
-                            <TableCell className={styles["MuiTableCell-body"]}>
-                              {row.employeeId}
+                            <TableCell className={styles["MuiTableCell-bodyImg"]}>
+                              {
+                                <div className={styles.ImgCenter}>
+                                <a target="_blank" rel="noreferrer" href={row.fileUrl}>
+                                <img className={styles.centerImg} src="https://globalmindsbiz.sharepoint.com/sites/Peoplesoft/Shared%20Documents/downloadIcon.png"></img>
+                                </a>
+                              </div>
+                              }
                             </TableCell>
-                            {/* <TableCell className={styles["MuiTableCell-body"]}>
-                          {row.title + " " + row.firstName + " " + row.lastName}
-                        </TableCell> */}
                             <TableCell className={styles["MuiTableCell-body"]}>
                               {row.fileType}
                             </TableCell>
